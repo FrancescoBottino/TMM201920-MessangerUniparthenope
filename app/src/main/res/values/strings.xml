@@ -11,7 +11,6 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
-    <string name="home_second">Home Second</string>
     <string name="login_button_text">Login</string>
     <string name="user_not_logged">User not logged in</string>
     <string name="logout_button_text">Logout</string>

@@ -26,7 +26,7 @@ class Auth( private var context: Context) {
         get() = getValue(USERNAME)
         set(newUsername) = setValue(USERNAME, newUsername)
 
-    var token:String?
+    private var token:String?
         get() = getValue(TOKEN)
         set(newUsername) = setValue(TOKEN, newUsername)
 

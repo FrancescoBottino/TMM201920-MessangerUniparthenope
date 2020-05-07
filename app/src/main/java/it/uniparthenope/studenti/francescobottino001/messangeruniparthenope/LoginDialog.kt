@@ -45,7 +45,7 @@ class LoginDialog(context: Context, private val onLogin: (()->Unit)?) : AlertDia
         }
     }
 
-    fun startLoadingState() {
+    private fun startLoadingState() {
         setCancelable(false)
         animateView(progress_overlay, View.VISIBLE, 1f, 200)
         login_button.isEnabled = false
@@ -53,7 +53,7 @@ class LoginDialog(context: Context, private val onLogin: (()->Unit)?) : AlertDia
         login_button.text = ""
     }
 
-    fun endLoadingState() {
+    private fun endLoadingState() {
         login_button.text = this.context.resources.getString(R.string.login_button_text)
         login_button.isClickable = true
         login_button.isEnabled = true
