@@ -28,7 +28,7 @@ class Auth( private var context: Context) {
 
     private var token:String?
         get() = getValue(TOKEN)
-        set(newUsername) = setValue(TOKEN, newUsername)
+        set(newToken) = setValue(TOKEN, newToken)
 
     fun login(token:String, username:String) {
         this.username = username
