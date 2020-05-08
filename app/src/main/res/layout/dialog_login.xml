@@ -83,7 +83,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/result_textview"
+        android:id="@+id/error_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

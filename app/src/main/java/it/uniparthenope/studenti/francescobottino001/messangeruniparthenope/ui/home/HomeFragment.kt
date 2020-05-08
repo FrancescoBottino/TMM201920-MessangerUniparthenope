@@ -35,11 +35,11 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        val app = requireContext().applicationContext as App
-        val auth = Auth.getInstance(app)
+        val ctx = requireContext()
+        val auth = Auth.getInstance(ctx)
 
         if(auth.isUserLogged()) {
-            user_message_textview.text = auth.username
+            user_message_textview.text = "Benvenuto ${auth.username}"
             user_action_button.text = getString(R.string.logout_button_text)
             user_action_button.setOnClickListener {
                 auth.logout()

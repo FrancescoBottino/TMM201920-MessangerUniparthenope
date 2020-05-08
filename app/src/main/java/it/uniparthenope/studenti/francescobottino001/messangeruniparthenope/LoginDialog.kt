@@ -33,13 +33,13 @@ class LoginDialog(context: Context, private val onLogin: (()->Unit)?) : AlertDia
             if ( error == null ) {
                 token!!
 
-                result_textview.visibility = View.GONE
+                error_textview.visibility = View.GONE
                 endLoadingState()
                 dismiss()
                 onLogin?.invoke()
             } else {
-                result_textview.text = error
-                result_textview.visibility = View.VISIBLE
+                error_textview.text = error
+                error_textview.visibility = View.VISIBLE
                 endLoadingState()
             }
         }
@@ -58,6 +58,6 @@ class LoginDialog(context: Context, private val onLogin: (()->Unit)?) : AlertDia
         login_button.isClickable = true
         login_button.isEnabled = true
         animateView(progress_overlay, View.GONE, 0f, 200)
-        setCancelable(false)
+        setCancelable(true)
     }
 }
